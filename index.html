@@ -1,230 +1,486 @@
 <!DOCTYPE html>
 <html lang="fr">
-   <head>
-    <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio d'Evan Chamiot Prieur — BUT Informatique (IUT Blagnac). Projets web, Java/JavaFX, bases de données, Linux/serveurs." />
 
-    <!-- AJOUT pour le responsive (ne change pas le contenu) -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Evan Chamiot Prieur</title>
 
-    <link rel="stylesheet" href="CssSiteWeb.css" />
-    <title>Portfolio CHAMIOT PRIEUR Evan</title>
-  </head>
-  
-  <body>
-  
-  	<!-- page accueil -->
-    <section class="imgfond" id="Paccueil">
-	  <div class="text-box">
-        <h1>
-		PortFolio
-		</h1>
-		<h2>
-		Evan Chamiot Prieur
-		</h2>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CssSiteWeb.css" />
+</head>
+
+<body>
+  <!-- Top bar -->
+  <header class="topbar" id="top">
+    <a class="brand" href="#top" aria-label="Retour en haut">
+      <span class="brand__dot" aria-hidden="true"></span>
+      <span class="brand__text">Evan</span>
+    </a>
+
+    <nav class="nav" aria-label="Navigation">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+        <span class="sr-only">Ouvrir le menu</span>
+        <span class="burger" aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#timeline">Parcours</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="theme" type="button" id="themeBtn" aria-label="Changer le thème">
+        <span class="theme__icon" aria-hidden="true">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="pill">BUT Informatique • IUT Blagnac • Recherche de stage</p>
+
+          <h1>
+            Evan <span class="accent">Chamiot Prieur</span>
+          </h1>
+
+          <p class="lead">
+            Étudiant en BUT Informatique, motivé pour développer mes compétences en
+            <strong>développement web</strong>, <strong>Java/JavaFX</strong>, <strong>SQL</strong> et <strong>Linux</strong>.
+          </p>
+
+          <div class="hero__cta">
+            <!-- Mets ton fichier CV dans le dossier et renomme-le "CV_Evan_Chamiot_Prieur.pdf" -->
+            <a class="btn btn--primary" href="CV_Evan_Chamiot_Prieur.pdf" target="_blank" rel="noopener">
+              Télécharger mon CV
+            </a>
+            <a class="btn btn--ghost" href="#contact">Me contacter</a>
+          </div>
+
+          <dl class="meta">
+            <div>
+              <dt>Localisation</dt>
+              <dd>Toulouse / Plaisance-du-Touch</dd>
+            </div>
+            <div>
+              <dt>Disponibilité</dt>
+              <dd>Télétravail ou présentiel</dd>
+            </div>
+            <div>
+              <dt>Permis</dt>
+              <dd>B</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__card">
+          <div class="profile">
+            <!-- Option 1 : ajoute ta photo dans /assets/profile.jpg -->
+            <!-- Option 2 : utilise une image générée (voir prompts plus bas) -->
+            <img class="profile__img" src="assets/profile.jpg" alt="Photo ou avatar d'Evan Chamiot Prieur" onerror="this.src='assets/profile-placeholder.png'">
+            <div class="profile__body">
+              <h2 class="profile__name">Evan Chamiot Prieur</h2>
+              <p class="profile__role">Étudiant BUT Informatique</p>
+
+              <div class="profile__links">
+                <a class="chip" href="mailto:echamiot@hotmail.com">echamiot@hotmail.com</a>
+                <a class="chip" href="tel:+33769295109">07 69 29 51 09</a>
+                <!-- Remplace par ton vrai lien LinkedIn si tu veux -->
+                <a class="chip" href="#" aria-label="LinkedIn (à renseigner)">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__n">3</span>
+              <span class="stat__l">projets majeurs</span>
+            </div>
+            <div class="stat">
+              <span class="stat__n">4</span>
+              <span class="stat__l">axes techniques</span>
+            </div>
+            <div class="stat">
+              <span class="stat__n">Agile</span>
+              <span class="stat__l">travail en équipe</span>
+            </div>
+          </div>
+        </div>
       </div>
-	  <div class="nav-bottom">
-  <nav>
-    <ul class="nav-links">
-      <li><a href="#Paccueil">Accueil</a></li>
-      <li><a href="#Pperso">À propos</a></li>
-      <li><a href="#Pformation">Formations</a></li>
-      <li><a href="#Pprojet">Projets</a></li>
-      <li><a href="#compet">Compétences</a></li>
-      <li><a href="#Pinterets">Intérêts</a></li>
-    </ul>
-  </nav>
-</div>
 
-	 
+      <a class="scroll" href="#about" aria-label="Aller à la section à propos">
+        <span aria-hidden="true">↓</span>
+      </a>
+    </section>
 
-    </section>
-	
-  	<!-- page à propos de moi -->
-    <section class="Persotxt" id="Pperso">
-	  <h1>À propos de moi</h1>
-	  <div class="perso">
-        <div class="Ppositif">
-          <h3>Atout </h3>
-		  <ul>
-			<li>Motivé  </li>
-			<li>Ponctuel</li>
-			<li>Autonome</li>
-			<li>Rigoureux</li>
-			<li>Impliqué</li>
-			<li>Sérieux</li>
-			<li>Organisé</li>
-		   </ul>
-        </div>
-		
-		</div>
-		
-	   <div style="display: flex; justify-content: center;">
-        <div class="perso">
-          <div  class="Ppositif2">
-            <h3>Profil </h3>
-			<p>
-			Evan Chamiot Prieur</br>
-			18 ans</br>
-			Permis B </br>
-			Mail : <a href="mailto:echamiot@hotmail.com">echamiot@hotmail.com</a><br>
-			</p>
-		  
-          </div>
-	  </div>
-      </div>	
-	
-    </section>
-  
-  
-  	<!-- page formation -->
-	<section class="Formationtxt" id="Pformation">
-      <h1>Formations</h1>
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head">
+          <h2>À propos</h2>
+          <p>Une présentation claire et orientée “stage / missions”.</p>
+        </header>
 
-      <div class="Formation">
-        <div class="FormationColone">
-          <h3>Formation Post-bac</h3>
-          <p>
-             BAC STI2D<br />
-			Système d'Information et Numérique<br />
-			Mention BIEN<br />
-			Lycée Victor Hugo Colomiers<br />
-			2022-2024
-          </p>
-        </div>
-		
-		<div class="FormationColone">
-          <h3>Formation actuelle</h3>
-          <p>
-		  <br />
-            BUT INFORMATIQUE<br />
-             IUT BLAGNAC<br />
-            1ère année 2024
-          </p>
-        </div>
-      </div>
-    </section>
-	
-	
-	<section class="Projettxt" id="Pprojet">
-      <h1>Projets réalisés</h1>	
-        <div class="projet">
-		  <div  class="projet2">
-			<img src="Mobil'eau.jpg" alt="projet" />
-		  </div>
-          <div  class="projet1">
-            <h3> STI2D</h3>
-			<p>
-			Pour l'année de Terminale STI2D, nous avions un tous un 
-			projet à réaliser. Pour ma part il s'agissait d'un mobil'eau.
-			Son principe est un lavabo qui s'adapte à la hauteur de la
-			personne, très utile pour les PMR.
-			</p>
-          </div>
-        </div>
-		
-		<div class="projet">
-		  <div  class="projet3">
-			<img src="jjb.jpg" alt="projet" />
-		  </div>
-          <div  class="projet4">
-            <h3> SAE Recueil de besoin en entreprise</h3>
-			<p>
-			En équipe de trois, nous devons contacter une entreprise
-			afin de réaliser un recueil de besoin pour répondre à 
-			un besoin client.
-			</p>
-          </div>
-        </div>
-		
-		<div class="projet">
-		  <div  class="projet5">
-			<img src="SAE 1.012.webp" alt="projet" />
-		  </div>
-          <div  class="projet6">
-            <h3> SAE Implémentation d'un besoin client</h3>
-			<p>
-			En équipe de trois, nous devons coder une application 
-			pour d'assister les arbitres lors des courses de 
-			canoë en facilitant la saisie et le traitement 
-			des performances des compétiteurs sur deux manches.
-			</p>
-          </div>
-        </div>
-    </section>
-	
-	<!-- page compétence -->
-	<section class="competencetxt" id="compet">
-      <h1>Compétence</h1>
-      <div class="comp">
-        <div class="competence">
-          <h3>Hard Skills</h3>
-          <p>
-		  </br>
-            <strong>Langages de programmation :</strong> HTML, CSS, Java, SQL</br>
-			<strong>Montage vidéo :</strong> Capcut</br>
-			<strong>Langue :</strong> Anglais (B1), Espagnol (A2-B1)
-          </p>
-        </div>
-		
-		<div class="competence">
-          <h3>Soft Skills</h3>
-          <p>
-		  <strong>Conduire</strong> un projet</br>
-		  <strong>Guider</strong> un projet</br>
-		  <strong>Travailler en équipe</strong></br>
-		  <strong>Créativité</strong></br>
-		  <strong>Remise en question</strong></br>
-		  <strong>Gestion du temps</strong></br>
-          </p>
+        <div class="grid2">
+          <article class="card">
+            <h3>Ce que je cherche</h3>
+            <p>
+              Un <strong>stage</strong> pour apprendre en conditions réelles, contribuer à des projets concrets
+              et progresser sur le <strong>développement</strong> (web / back / logiciel) et les <strong>bases de données</strong>.
+            </p>
+            <ul class="list">
+              <li>Travail en équipe (Agile / GitHub)</li>
+              <li>Respect d’un cahier des charges</li>
+              <li>Envie d’apprendre vite et bien</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Points forts</h3>
+            <div class="tags">
+              <span class="tag">Autonomie</span>
+              <span class="tag">Ponctualité</span>
+              <span class="tag">Rigueur</span>
+              <span class="tag">Adaptation</span>
+              <span class="tag">Esprit d’équipe</span>
+            </div>
+            <p class="muted">
+              Je suis à l’aise sur des projets où il faut analyser un besoin, planifier, puis livrer une solution propre et testable.
+            </p>
+          </article>
         </div>
       </div>
     </section>
-	
-<section class="interettxt" id="Pinterets">
-      <h1>Intérêt</h1>
 
-      <div class="interet">
-        <div class="inter">
-          <h3>Sport</h3>
-		  <p>
-		  J'aime beaucoup pratiquer du sport, particulièrement 
-		  le foot que je pratique depuis 10 ans, mais j'aime aussi
-		  le ski, le surf, le rugby,...
-		  </p>
-          <img src="foot.webp" alt="projet" />
-		  
+    <!-- PROJECTS -->
+    <section class="section section--alt" id="projects">
+      <div class="container">
+        <header class="section__head">
+          <h2>Projets</h2>
+          <p>Les projets qui résument le mieux mes compétences actuelles.</p>
+        </header>
+
+        <div class="projects">
+          <article class="project card">
+            <div class="project__media">
+              <img src="assets/project-ecommerce.png" alt="Aperçu projet : site e-commerce PHP + base de données" loading="lazy">
+            </div>
+            <div class="project__body">
+              <h3>Site e-commerce (PHP + base de données)</h3>
+              <p class="muted">
+                Développement d’un site e-commerce en <strong>PHP</strong> avec intégration d’une <strong>base de données</strong>,
+                conception/exploitation, respect du cahier des charges, travail en <strong>méthode Agile</strong>.
+              </p>
+              <div class="tags">
+                <span class="tag">PHP</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Agile</span>
+                <span class="tag">Cahier des charges</span>
+              </div>
+              <div class="project__links">
+                <a class="link" href="#" aria-label="Lien GitHub (à ajouter)">GitHub</a>
+                <a class="link" href="#" aria-label="Démonstration (à ajouter)">Démo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project card">
+            <div class="project__media">
+              <img src="assets/project-javafx.png" alt="Aperçu projet : application Java/JavaFX gestion de tournois" loading="lazy">
+            </div>
+            <div class="project__body">
+              <h3>Application gestion de tournois (Java / JavaFX)</h3>
+              <p class="muted">
+                Application en <strong>Java/JavaFX</strong> avec base de données intégrée, respect d’un cahier des charges,
+                travail en équipe avec <strong>GitHub</strong>.
+              </p>
+              <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">JavaFX</span>
+                <span class="tag">GitHub</span>
+                <span class="tag">Conception</span>
+              </div>
+              <div class="project__links">
+                <a class="link" href="#" aria-label="Lien GitHub (à ajouter)">GitHub</a>
+                <a class="link" href="#" aria-label="Captures (à ajouter)">Captures</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project card">
+            <div class="project__media">
+              <img src="assets/project-linux.png" alt="Aperçu projet : serveur Rocky Linux Apache déploiement web" loading="lazy">
+            </div>
+            <div class="project__body">
+              <h3>Services réseau (Rocky Linux + Apache)</h3>
+              <p class="muted">
+                Configuration d’un serveur <strong>Rocky Linux 9.5</strong> avec <strong>Apache</strong>, déploiement d’un site
+                statique et dynamique, création/exploitation d’une base de données.
+              </p>
+              <div class="tags">
+                <span class="tag">Linux</span>
+                <span class="tag">Apache</span>
+                <span class="tag">Déploiement</span>
+                <span class="tag">SQL</span>
+              </div>
+              <div class="project__links">
+                <a class="link" href="#" aria-label="Documentation (à ajouter)">Doc</a>
+                <a class="link" href="#" aria-label="Schéma (à ajouter)">Schéma</a>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="inter">
-          <h3>Film</h3>
-		  <p> 
-		  Regarder des films ou series reste très agréable.
-		  </p>
-		    <img src="film.webp" alt="projet" />
 
+        <p class="note">
+          Astuce : si tu me donnes les liens GitHub / captures, je te les intègre directement dans les boutons.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section__head">
+          <h2>Compétences</h2>
+          <p>Stack & savoir-faire issus de mes cours et projets.</p>
+        </header>
+
+        <div class="grid3">
+          <article class="card">
+            <h3>Développement</h3>
+            <ul class="list">
+              <li>Java, JavaFX</li>
+              <li>HTML, CSS, PHP</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Base de données</h3>
+            <ul class="list">
+              <li>SQL Developer (conception & gestion)</li>
+              <li>Requêtes SQL, gestion des données</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Systèmes & outils</h3>
+            <ul class="list">
+              <li>Linux (Ubuntu), MobaXterm</li>
+              <li>GitHub (travail en équipe)</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="grid2">
+          <article class="card">
+            <h3>Soft skills</h3>
+            <div class="tags">
+              <span class="tag">Adaptation</span>
+              <span class="tag">Rigueur</span>
+              <span class="tag">Autonomie</span>
+              <span class="tag">Ponctualité</span>
+              <span class="tag">Travail en équipe</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Langues</h3>
+            <ul class="list">
+              <li>Anglais — B1</li>
+              <li>Espagnol — A2</li>
+            </ul>
+          </article>
         </div>
       </div>
-      <div style="display: flex; justify-content: center;">
-        <div class="interet">
-          <div  class="inter2">
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section section--alt" id="timeline">
+      <div class="container">
+        <header class="section__head">
+          <h2>Parcours</h2>
+          <p>Formation + expériences universitaires.</p>
+        </header>
+
+        <div class="timeline">
+          <div class="timeline__item card">
+            <p class="timeline__when">Sept. 2024 → Juil. 2027</p>
+            <h3>BUT Informatique — IUT Toulouse II Blagnac</h3>
+            <p class="muted">Blagnac</p>
+          </div>
+
+          <div class="timeline__item card">
+            <p class="timeline__when">Sept. 2022 → Juil. 2024</p>
+            <h3>BAC STI2D (SIN) — Lycée Victor Hugo</h3>
+            <p class="muted">Colomiers • Mention Bien</p>
+          </div>
+
+          <div class="timeline__item card">
+            <p class="timeline__when">2024 → 2025</p>
+            <h3>Création & exploitation d’une base de données</h3>
+            <p class="muted">Oracle / SQL Developer, conception SGBD, requêtes SQL</p>
+          </div>
+
+          <div class="timeline__item card">
+            <p class="timeline__when">2025</p>
+            <h3>Projets universitaires (Agile / GitHub)</h3>
+            <p class="muted">E-commerce PHP + BD, JavaFX, services réseau Linux/Apache</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section class="section" id="interests">
+      <div class="container">
+        <header class="section__head">
+          <h2>Centres d’intérêt</h2>
+          <p>Ce qui me motive en dehors du code.</p>
+        </header>
+
+        <div class="grid3">
+          <article class="card">
+            <h3>Sport</h3>
+            <p class="muted">Membre actif d’un club de football depuis 11 ans + pratique d’autres sports.</p>
+          </article>
+          <article class="card">
             <h3>Voyage</h3>
-			<p>
-			J'adore voyager, découvrir d'autres pays ou coutume me passionne.
-			</p>
-				<img src="voyage.webp" alt="projet" />
-          </div>
+            <p class="muted">Découverte de nouvelles cultures, passion pour l’exploration.</p>
+          </article>
+          <article class="card">
+            <h3>Curiosité</h3>
+            <p class="muted">J’aime apprendre, tester, itérer et progresser rapidement.</p>
+          </article>
+        </div>
       </div>
-      </div>
-    </section>	
-	
-	<footer class="footer">
-		<p>&copy; 2024 Evan Chamiot Prieur. Tous droits réservés.</p>
-		<p>
-		Contact : <a href="mailto:echamiot@hotmail.com">echamiot@hotmail.com</a>	
-		</p>
-	</footer>
-	<a href="#Paccueil" id="scrollToTop" title="Remonter en haut">
-  &#8679;
-</a>
+    </section>
 
-  </body>
+    <!-- CONTACT -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <header class="section__head">
+          <h2>Contact</h2>
+          <p>Réponse rapide — n’hésite pas à me proposer un échange.</p>
+        </header>
+
+        <div class="grid2">
+          <article class="card">
+            <h3>Coordonnées</h3>
+            <ul class="list">
+              <li><strong>Email :</strong> <a class="link" href="mailto:echamiot@hotmail.com">echamiot@hotmail.com</a></li>
+              <li><strong>Téléphone :</strong> <a class="link" href="tel:+33769295109">07 69 29 51 09</a></li>
+              <li><strong>Localisation :</strong> Toulouse / Plaisance-du-Touch</li>
+              <li><strong>Permis :</strong> B</li>
+            </ul>
+
+            <div class="contact__cta">
+              <a class="btn btn--primary" href="mailto:echamiot@hotmail.com?subject=Contact%20-%20Stage%20BUT%20Informatique">
+                M’écrire par email
+              </a>
+              <a class="btn btn--ghost" href="tel:+33769295109">Appeler</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Message rapide</h3>
+            <p class="muted">
+              Tu peux aussi copier/coller ce mini message :
+            </p>
+
+            <div class="copybox">
+              <code id="quickMsg">Bonjour Evan, je vous contacte pour une opportunité de stage en développement. Seriez-vous disponible pour un échange cette semaine ?</code>
+              <button class="btn btn--small" type="button" id="copyBtn">Copier</button>
+            </div>
+
+            <p class="note">
+              (Option) Si tu veux un vrai formulaire qui envoie un email, je te le fais en version GitHub Pages + Formspree.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <p>© <span id="year"></span> Evan Chamiot Prieur</p>
+      <a class="link" href="#top">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+  <button class="toTop" id="toTop" aria-label="Remonter">↑</button>
+
+  <script>
+    // ====== Menu mobile ======
+    const toggle = document.querySelector(".nav__toggle");
+    const menu = document.querySelector("#navMenu");
+    toggle?.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      menu.classList.toggle("is-open");
+    });
+
+    // Fermer le menu après clic
+    menu?.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => {
+        menu.classList.remove("is-open");
+        toggle?.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // ====== Theme (light/dark) ======
+    const themeBtn = document.getElementById("themeBtn");
+    const root = document.documentElement;
+
+    function setTheme(mode) {
+      root.dataset.theme = mode;
+      localStorage.setItem("theme", mode);
+      const icon = document.querySelector(".theme__icon");
+      if (icon) icon.textContent = mode === "dark" ? "☀" : "☾";
+    }
+
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") setTheme(saved);
+
+    themeBtn?.addEventListener("click", () => {
+      const current = root.dataset.theme === "dark" ? "dark" : "light";
+      setTheme(current === "dark" ? "light" : "dark");
+    });
+
+    // ====== Bouton remonter ======
+    const toTop = document.getElementById("toTop");
+    window.addEventListener("scroll", () => {
+      if (!toTop) return;
+      toTop.classList.toggle("is-show", window.scrollY > 700);
+    });
+    toTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // ====== Copy message ======
+    const copyBtn = document.getElementById("copyBtn");
+    const quickMsg = document.getElementById("quickMsg");
+    copyBtn?.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(quickMsg?.textContent || "");
+        copyBtn.textContent = "Copié !";
+        setTimeout(() => (copyBtn.textContent = "Copier"), 1200);
+      } catch (e) {
+        copyBtn.textContent = "Erreur";
+        setTimeout(() => (copyBtn.textContent = "Copier"), 1200);
+      }
+    });
+
+    // ====== Année footer ======
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
